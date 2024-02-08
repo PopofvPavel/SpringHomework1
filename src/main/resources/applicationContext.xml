@@ -21,7 +21,7 @@
         </constructor-arg>
     </bean>
 
-    <bean id="studentzDimitriy" class="com.example.springtask.model.student.Student"
+    <bean id="studentDimitriy" class="com.example.springtask.model.student.Student"
           init-method="init">
         <constructor-arg name="name" value="Dimitriy"/>
         <constructor-arg name="subjectMarkMap">

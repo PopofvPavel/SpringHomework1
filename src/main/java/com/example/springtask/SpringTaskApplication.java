@@ -18,7 +18,8 @@ public class SpringTaskApplication {
         printStudentsList(teacher1.getStudents());
 
 
-        AnnotationConfigApplicationContext classConfigContext = new AnnotationConfigApplicationContext(ContextConfig.class);
+        AnnotationConfigApplicationContext classConfigContext =
+                new AnnotationConfigApplicationContext(ContextConfig.class);
         Teacher teacher2 = classConfigContext.getBean("teacher", Teacher.class);
         printStudentsList(teacher2.getStudents());
 
