@@ -15,7 +15,7 @@ public class Student {
 
 
     public void init() {
-        isTaken = getAverageMark() > Mark.UD.getDigitMark();
+        isTaken = getAverageMark() >= Mark.UD.getDigitMark();
     }
 
     private double getAverageMark() {
