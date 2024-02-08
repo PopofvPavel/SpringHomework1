@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:component-scan base-package="com.example.springtask.model"/>
+
+    <bean id="studentArtemiy" class="com.example.springtask.model.student.Student"
+          init-method="init">
+        <constructor-arg name="name" value="Artemiy"/>
+        <constructor-arg name="subjectMarkMap">
+            <map>
+                <entry key="Math" value="HOR"/>
+                <entry key="Biology" value="OTL"/>
+                <entry key="Physics" value="UD"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="studentzDimitriy" class="com.example.springtask.model.student.Student"
+          init-method="init">
+        <constructor-arg name="name" value="Dimitriy"/>
+        <constructor-arg name="subjectMarkMap">
+            <map>
+                <entry key="Math" value="UD"/>
+                <entry key="Biology" value="NEUD"/>
+                <entry key="Physics" value="NEUD"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="studentJil" class="com.example.springtask.model.student.Student"
+          init-method="init">
+        <constructor-arg name="name" value="Jil"/>
+        <constructor-arg name="subjectMarkMap">
+            <map>
+                <entry key="Math" value="NEUD"/>
+                <entry key="Biology" value="NEUD"/>
+                <entry key="Physics" value="NEUD"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+</beans>
