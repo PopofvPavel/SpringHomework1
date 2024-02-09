@@ -12,7 +12,7 @@ public class StudentBeanPostProcessor implements BeanPostProcessor {
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if (bean instanceof Student student) {
             if ("Jil".equals(student.getName())) {
-                ((Student) bean).getSubjectMarkMap().replaceAll((subject, mark) -> getMark(mark));
+                student.getSubjectMarkMap().replaceAll((subject, mark) -> getMark(mark));
 
             }
         }
