@@ -1,17 +1,17 @@
-package com.example.springtask.model.student;
+package com.example.springtask.postprocessors;
 
+import com.example.springtask.model.student.Mark;
+import com.example.springtask.model.student.Student;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
-
-import java.util.stream.Stream;
 
 @Component
 public class StudentBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if (bean instanceof Student) {
-            if ("Jil".equals(((Student) bean).getName())) {
+        if (bean instanceof Student student) {
+            if ("Jil".equals(student.getName())) {
                 ((Student) bean).getSubjectMarkMap().replaceAll((subject, mark) -> getMark(mark));
 
             }
@@ -26,13 +26,13 @@ public class StudentBeanPostProcessor implements BeanPostProcessor {
 
     private Mark getMark(Mark mark) {
         switch (mark) {
-            case OTL:
-            case HOR:
-                return Mark.OTL;
-            case UD:
-                return Mark.HOR;
-            case NEUD:
-                return Mark.UD;
+            case EXCELLENT:
+            case GOOD:
+                return Mark.EXCELLENT;
+            case SATISFACTORY:
+                return Mark.GOOD;
+            case UNSATISFACTORY:
+                return Mark.SATISFACTORY;
         }
         return mark;
     }

@@ -7,16 +7,16 @@
          http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <context:component-scan base-package="com.example.springtask.model"/>
+    <context:component-scan base-package="com.example.springtask"/>
 
     <bean id="studentArtemiy" class="com.example.springtask.model.student.Student"
           init-method="init">
         <constructor-arg name="name" value="Artemiy"/>
         <constructor-arg name="subjectMarkMap">
             <map>
-                <entry key="Math" value="HOR"/>
-                <entry key="Biology" value="OTL"/>
-                <entry key="Physics" value="UD"/>
+                <entry key="Math" value="GOOD"/>
+                <entry key="Biology" value="EXCELLENT"/>
+                <entry key="Physics" value="SATISFACTORY"/>
             </map>
         </constructor-arg>
     </bean>
@@ -26,9 +26,9 @@
         <constructor-arg name="name" value="Dimitriy"/>
         <constructor-arg name="subjectMarkMap">
             <map>
-                <entry key="Math" value="UD"/>
-                <entry key="Biology" value="NEUD"/>
-                <entry key="Physics" value="NEUD"/>
+                <entry key="Math" value="SATISFACTORY"/>
+                <entry key="Biology" value="UNSATISFACTORY"/>
+                <entry key="Physics" value="UNSATISFACTORY"/>
             </map>
         </constructor-arg>
     </bean>
@@ -38,9 +38,9 @@
         <constructor-arg name="name" value="Jil"/>
         <constructor-arg name="subjectMarkMap">
             <map>
-                <entry key="Math" value="NEUD"/>
-                <entry key="Biology" value="NEUD"/>
-                <entry key="Physics" value="NEUD"/>
+                <entry key="Math" value="UNSATISFACTORY"/>
+                <entry key="Biology" value="UNSATISFACTORY"/>
+                <entry key="Physics" value="UNSATISFACTORY"/>
             </map>
         </constructor-arg>
     </bean>

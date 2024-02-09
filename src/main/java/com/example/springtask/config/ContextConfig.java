@@ -10,16 +10,15 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 
 @Component
-@ComponentScan(basePackages = "com.example.springtask.model")
-
+@ComponentScan(basePackages = "com.example.springtask")
 public class ContextConfig {
 
     @Bean(initMethod = "init")
     public Student studentAkakiy() {
         HashMap<Subject, Mark> subjectMap = new HashMap<>();
-        subjectMap.put(Subject.Math, Mark.HOR);
-        subjectMap.put(Subject.Biology, Mark.OTL);
-        subjectMap.put(Subject.Physics, Mark.UD);
+        subjectMap.put(Subject.Math, Mark.GOOD);
+        subjectMap.put(Subject.Biology, Mark.EXCELLENT);
+        subjectMap.put(Subject.Physics, Mark.SATISFACTORY);
 
         return new Student("Akakiy", subjectMap);
     }
@@ -27,9 +26,9 @@ public class ContextConfig {
     @Bean(initMethod = "init")
     public Student studentInnokentiy() {
         HashMap<Subject, Mark> subjectMap = new HashMap<>();
-        subjectMap.put(Subject.Math, Mark.UD);
-        subjectMap.put(Subject.Biology, Mark.NEUD);
-        subjectMap.put(Subject.Physics, Mark.NEUD);
+        subjectMap.put(Subject.Math, Mark.SATISFACTORY);
+        subjectMap.put(Subject.Biology, Mark.UNSATISFACTORY);
+        subjectMap.put(Subject.Physics, Mark.UNSATISFACTORY);
 
         return new Student("Innokentiy", subjectMap);
     }
@@ -37,9 +36,9 @@ public class ContextConfig {
     @Bean(initMethod = "init")
     public Student studentJil() {
         HashMap<Subject, Mark> subjectMap = new HashMap<>();
-        subjectMap.put(Subject.Math, Mark.NEUD);
-        subjectMap.put(Subject.Biology, Mark.NEUD);
-        subjectMap.put(Subject.Physics, Mark.UD);
+        subjectMap.put(Subject.Math, Mark.UNSATISFACTORY);
+        subjectMap.put(Subject.Biology, Mark.UNSATISFACTORY);
+        subjectMap.put(Subject.Physics, Mark.SATISFACTORY);
 
         return new Student("Jil", subjectMap);
     }

@@ -1,13 +1,10 @@
 package com.example.springtask.model.student;
 
 public enum Mark {
-    OTL(5),
-    HOR(4),
-    UD(3),
-    NEUD(2),
-
-    ;
-
+    EXCELLENT(5),
+    GOOD(4),
+    SATISFACTORY(3),
+    UNSATISFACTORY(2);
 
     private final int digitMark;
 

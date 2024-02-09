@@ -2,7 +2,6 @@ package com.example.springtask.model.student;
 
 
 import java.util.Map;
-import java.util.stream.Stream;
 
 
 public class Student {
@@ -13,9 +12,8 @@ public class Student {
 
     private boolean isTaken = false;
 
-
     public void init() {
-        isTaken = getAverageMark() >= Mark.UD.getDigitMark();
+        isTaken = getAverageMark() >= Mark.SATISFACTORY.getDigitMark();
     }
 
     private double getAverageMark() {
@@ -26,7 +24,6 @@ public class Student {
     public Student(String name, Map<Subject, Mark> subjectMarkMap) {
         Name = name;
         this.subjectMarkMap = subjectMarkMap;
-
 
     }
 

@@ -5,7 +5,6 @@ import com.example.springtask.model.student.Student;
 import com.example.springtask.model.teacher.Teacher;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import java.util.List;
 
 
@@ -16,7 +15,6 @@ public class SpringTaskApplication {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         Teacher teacher1 = xmlApplicationContext.getBean("teacher", Teacher.class);
         printStudentsList(teacher1.getStudents());
-
 
         AnnotationConfigApplicationContext classConfigContext =
                 new AnnotationConfigApplicationContext(ContextConfig.class);
@@ -31,6 +29,5 @@ public class SpringTaskApplication {
             System.out.println(stud);
         }
     }
-
 
 }
